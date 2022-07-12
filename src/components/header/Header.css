@@ -1,0 +1,36 @@
+.header-container {
+  background: black;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  border: 1px solid rgb(39, 39, 39);
+  font-size: 20px;
+}
+
+.header-item-cont {
+  display: block;
+  /*Background Banner here*/
+}
+
+.nav-bar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 30px;
+}
+
+.nav-item {
+  padding: 10px 10px 10px 10px;
+  width: 200px;
+  font-weight: 500;
+  transition: background 0.5s;
+  transition: color 0.5s;
+  transition: border 0.5s;
+}
+
+.nav-item:hover {
+  border: 1px solid rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
+}
