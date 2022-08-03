@@ -1,0 +1,32 @@
+.container {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	translate: -50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	height: 15vh;
+	font-size: 1.5rem;
+	padding-top: 10px;
+	display: grid;
+	row-gap: 15px;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	background-color: black;
+	color: rgb(198, 198, 198);
+}
+
+.navItem {
+	padding: 10px 10px 10px 10px;
+	font-weight: 150;
+	transition: color 0.5s;
+	transition: outline 0.5s;
+}
+
+.navItem:hover {
+	outline: 1px solid rgb(102, 255, 102);
+	color: rgb(0, 255, 0);
+	transform: scale(1.2);
+}
