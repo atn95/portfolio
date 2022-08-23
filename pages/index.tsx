@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
 	return (
@@ -24,16 +25,18 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 			<div className={styles.resumeCont}>
-				<div className={styles.resumeBox}>
-					<h3 className={styles.resumeBtnText}>
-						{`<`} <span className={styles.dlTxt}>Download</span>
-						<br />
-						{` src="resume"/>`}
-					</h3>
-				</div>
+				<Link href='resume.docx'>
+					<div className={styles.resumeBox}>
+						<h3 className={styles.resumeBtnText}>
+							{`<`} <span className={styles.dlTxt}>Download</span>
+							<br />
+							{` src="resume"/>`}
+						</h3>
+					</div>
+				</Link>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;
