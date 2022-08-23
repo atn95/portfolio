@@ -13,8 +13,9 @@
 	align-items: center;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	background-color: black;
+	background: black;
 	color: rgb(198, 198, 198);
+	z-index: 2;
 }
 
 .nav-item {

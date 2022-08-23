@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Head from 'next/head';
+import { rainBinary as msgArray } from '../data/data';
+import useInterval from '../hooks/useInterval';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+	const [rainBinary] = useState<Array<String>>(msgArray);
+	const [rainPos, setRainPos] = useState<number>(0);
+	const [rainMsg, setRainMsg] = useState(rainBinary[0]);
+
+	useInterval(() => {
+		setRainPos(Math.floor(Math.random() * (window.innerWidth - 40) + 10));
+		setRainMsg(rainBinary[Math.floor(Math.random() * rainBinary.length)]);
+	}, 15000);
+
 	return (
-		<div>
+		<div className='page'>
+			<div className='rain' style={{ left: `${rainPos}px` }}>
+				<p>{rainMsg}</p>
+			</div>
 			<NavBar />
 			<br />
 			<br />

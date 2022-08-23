@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import styles from '../styles/Home.module.css';
+import type { NextPage } from 'next'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 	return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 					<div className={styles.nameBlock}>
 						<p className={[styles.tagText, styles.tabbed].join(' ')}> &nbsp;{'<h1>'}</p>
 						<h1 className={[styles.bigNameText, styles.tabbed].join(' ')}>An Tan Nguyen</h1>
-						<p className={[styles.tagText, styles.tabbed].join(' ')}>{'<h1>'}</p>
+						<p className={[styles.tagText, styles.tabbed].join(' ')}>{'</h1>'}</p>
 					</div>
 					<p className={styles.tagText}>
 						{`<p>`}
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Home;
+export default Home
