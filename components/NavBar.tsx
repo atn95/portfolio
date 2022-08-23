@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { ReactElement } from 'react'
-import styles from '../styles/NavBar.module.css'
+import Link from 'next/link';
+import { ReactElement } from 'react';
+import styles from '../styles/NavBar.module.css';
 
 export default function NavBar(): ReactElement {
 	return (
@@ -31,5 +31,5 @@ export default function NavBar(): ReactElement {
 				</div>
 			</Link>
 		</div>
-	)
+	);
 }
