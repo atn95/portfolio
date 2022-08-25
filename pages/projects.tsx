@@ -1,7 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 import { techStack } from '../data/type';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { projects } from '../data/data';
 import styles from '../styles/pages/Project.module.css';
 import ComponentBox from '../components/ComponentBox';
@@ -11,21 +9,35 @@ import { techs as stack } from '../data/data';
 export default function Projects<NextPage>() {
 	const [projectList, setProjectList] = useState(projects);
 	const [displayProjectList, setDisplayProjectList] = useState(projects);
-	const [techs] = useState<Array<techStack>>([...stack]);
+	const [techs] = useState<Array<techStack>>(stack);
 
-	const [selectedTech, setSelectedTech] = useState<Array<techStack>>([]);
+	const [selectedTech, setSelectedTech] = useState<Array<techStack>>(stack);
 
 	const toggleStack = (index: number) => {
 		const selectedTechCopy = [...selectedTech];
 		if (selectedTechCopy.includes(techs[index])) {
 			selectedTechCopy.splice(selectedTech.indexOf(techs[index]), 1);
-			console.log(true);
 		} else {
 			selectedTechCopy.push(techs[index]);
 		}
-		console.log(selectedTechCopy);
 		setSelectedTech(selectedTechCopy);
 	};
+
+	useEffect(() => {
+		const filteredProj = [];
+		const selectedTechNames = selectedTech.map((tech) => tech.name);
+		for (const proj of projectList) {
+			for (const tech of proj.techs) {
+				if (selectedTechNames.includes(tech.name)) {
+					console.log('breaking');
+					filteredProj.push(proj);
+					break;
+				}
+			}
+		}
+		console.log(filteredProj);
+		setDisplayProjectList(filteredProj);
+	}, [selectedTech]);
 
 	return (
 		<ComponentBox tag={'Projects'}>

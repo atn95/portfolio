@@ -6,6 +6,7 @@ export interface project {
 	github: string;
 	thumbnail: string;
 	description: string;
+	techs: Array<techStack>;
 }
 
 export interface techStack {
