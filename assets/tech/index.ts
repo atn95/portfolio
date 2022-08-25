@@ -1,0 +1,14 @@
+export { default as css } from './css.png';
+export { default as django } from './django.png';
+export { default as express } from './express.png';
+export { default as github } from './github.png';
+export { default as html } from './html.png';
+export { default as java } from './java.png';
+export { default as javascript } from './javascript.png';
+export { default as mongodb } from './mongodb.png';
+export { default as nodejs } from './nodejs.png';
+export { default as postgresql } from './postgresql.png';
+export { default as python } from './python.png';
+export { default as react } from './react.png';
+export { default as springboot } from './springboot.png';
+export { default as vue } from './vue.png';

@@ -46,3 +46,8 @@
 	width: 100%;
 	outline: 2px solid rgb(0, 255, 170);
 }
+
+.active {
+	color: rgb(0, 255, 170);
+	outline: 2px solid rgb(0, 255, 170);
+}

@@ -34,6 +34,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			{children}
+			<br />
+			<div style={{ color: 'white' }}>{/*footer*/}</div>
 		</div>
 	);
 }

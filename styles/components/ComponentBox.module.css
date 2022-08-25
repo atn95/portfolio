@@ -1,17 +1,60 @@
 .container {
-	outline: 2px solid rgb(153, 153, 153);
+	border: 2px solid rgb(153, 153, 153);
 	width: 95%;
-	height: auto;
 	margin: 0 auto;
+	/* padding-bottom: 30px; */
+	z-index: 1;
 }
 
 .before {
 	margin-top: 20px;
+	height: auto;
 	color: rgb(153, 153, 153);
-	font-size: 24px;
+	font-size: inherit;
 	position: absolute;
 	background: black;
 	margin: 0;
-	transform: translate(70%, -50%);
+	transform: translate(30px, -50%);
 	padding: 1rem;
+	margin-bottom: 30px;
+}
+
+.container:hover {
+	border: 2px solid rgb(0, 255, 170);
+}
+.container .container:hover .before {
+	/* color: rgb(0, 255, 170); */
+	animation: color-throb 2s infinite alternate;
+}
+
+.container .container:hover {
+	animation: border-throb 2s infinite alternate;
+}
+
+.container .container:hover p {
+	color: rgb(0, 255, 170);
+}
+
+@keyframes color-throb {
+	0% {
+		color: rgb(141, 253, 191);
+	}
+	50% {
+		color: rgb(0, 255, 123);
+	}
+	100% {
+		color: rgb(38, 240, 105);
+	}
+}
+
+@keyframes border-throb {
+	0% {
+		border: 2px solid rgb(141, 253, 191);
+	}
+	50% {
+		border: 2px solid rgb(0, 255, 123);
+	}
+	100% {
+		border: 2px solid rgb(38, 240, 105);
+	}
 }
