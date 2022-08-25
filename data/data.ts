@@ -8,15 +8,29 @@ export const rainBinary: Array<String> = [
 ];
 
 export const projects: Array<project> = [
-	{ name: '', deployed: '', github: '', thumbnail: '', description: '' },
-	{ name: '', deployed: '', github: '', thumbnail: '', description: '' },
+	{
+		name: 'DynaSoar Polling',
+		deployed: 'https://dynasoar.herokuapp.com/',
+		github: 'https://github.com/steves3142/dynamic_polling_frontend',
+		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		description:
+			'Front end page for a PERN stack web application. It serves to connect Host and client to a room where the host can send questions to clients and recieve realtime answers. Has a fully functional chat and announcement system. Realtime communication through SocketIO.',
+	},
+	{
+		name: 'DynaSoar Polling Backend',
+		deployed: '',
+		github: 'https://github.com/steves3142/dynamic_polling_backend',
+		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		description:
+			'Backend for DynaSoar Polling. Written in express with Sequelize to connect to a PostgreSQL. Serves to handle registering and logging questions for later calls. Also serves as controller for SocketIO communication.',
+	},
 	{
 		name: 'Fitness Tracker',
 		deployed: 'https://atntracker.herokuapp.com/',
 		github: 'https://github.com/atn95/exercise_planner_tracker',
 		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
 		description:
-			'A MERN stack application to create a 7 day workout schedule. On the days you have a workout it will pull up your workout for the day and allow you to log the workout. Your lift data can be pulled up and charted the see progression for certain lifts',
+			'A MERN stack application to create a 7 day workout schedule. On the days you have a workout it will pull up your workout for the day and allow you to log the workout. Your lift data can be pulled up and charted the see progression for certain lifts. The front end will communicate with the backend server through RESTful enpoints. Data is then stored in mongodb.',
 	},
 	{
 		name: 'Tetris',

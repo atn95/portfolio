@@ -29,7 +29,7 @@
 	height: 100%;
 	position: absolute;
 	content: '';
-	background: url('../assets/Button.png');
+	background: url('../../assets/Button.png');
 	background-size: cover;
 	animation: linear spin 10s infinite;
 }

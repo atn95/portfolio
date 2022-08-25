@@ -1,0 +1,17 @@
+.container {
+	outline: 2px solid rgb(153, 153, 153);
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.before {
+	margin-top: 20px;
+	color: rgb(153, 153, 153);
+	font-size: 24px;
+	position: absolute;
+	background: black;
+	margin: 0;
+	transform: translate(70%, -50%);
+	padding: 1rem;
+}
