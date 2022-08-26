@@ -23,7 +23,6 @@
 	border: 2px solid rgb(0, 255, 170);
 }
 .container .container:hover .before {
-	/* color: rgb(0, 255, 170); */
 	animation: color-throb 2s infinite alternate;
 }
 
