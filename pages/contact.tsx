@@ -2,6 +2,7 @@ import React, { useState, useEffect, ReactElement } from 'react';
 import ComponentBox from '../components/ComponentBox';
 import styles from '../styles/pages/Contact.module.css';
 import axios from 'axios';
+import { NextPage } from 'next';
 
 interface message {
 	name: string;
@@ -9,7 +10,7 @@ interface message {
 	message: string;
 }
 
-const contact = () => {
+const contact: NextPage = () => {
 	const [submitted, setSubmitted] = useState(false);
 	const initialForm = {
 		name: '',
