@@ -6,6 +6,7 @@ import ComponentBox from '../components/ComponentBox';
 import Image from 'next/image';
 import { techs as stack } from '../data/data';
 import { NextPage } from 'next';
+import axios from 'axios';
 
 const Projects: NextPage = () => {
 	const [projectList] = useState(projects);
@@ -37,6 +38,15 @@ const Projects: NextPage = () => {
 		}
 		setDisplayProjectList(filteredProj);
 	}, [selectedTech]);
+
+	const wakeHeroku = async () => {
+		for (const project of projects) await axios.get(project.deployed);
+	};
+
+	//ping herokuapp
+	useEffect(() => {
+		wakeHeroku();
+	}, []);
 
 	return (
 		<ComponentBox tag={'Projects'}>
@@ -84,7 +94,7 @@ const Projects: NextPage = () => {
 							<ComponentBox tag={project.name}>
 								<div className={styles['project-display']}>
 									<div className={styles['img-container']}>
-										<img src={project.thumbnail[0]} alt='Project Picture' />
+										<Image width='100%' height='55%' layout='responsive' objectFit='contain' src={project.thumbnail[0]} alt={`${project.name} Picture`} />
 									</div>
 									<div className={styles['description']}>
 										<p className={styles['tag-small']}>{'<p>'}</p>
