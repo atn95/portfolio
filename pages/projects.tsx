@@ -5,8 +5,9 @@ import styles from '../styles/pages/Project.module.css';
 import ComponentBox from '../components/ComponentBox';
 import Image from 'next/image';
 import { techs as stack } from '../data/data';
+import { NextPage } from 'next';
 
-export default function Projects<NextPage>() {
+const Projects: NextPage = () => {
 	const [projectList, setProjectList] = useState(projects);
 	const [displayProjectList, setDisplayProjectList] = useState(projects);
 	const [techs] = useState<Array<techStack>>(stack);
@@ -46,14 +47,29 @@ export default function Projects<NextPage>() {
 						<h1 className={styles['header']}>Projects</h1>
 						<p className={styles['tag']}>{'</h2>'}</p>
 					</div>
-					<div className={styles['filter-container']}>
-						{techs.map((tech, index) => (
-							<div key={index} onClick={() => toggleStack(index)} className={[styles['tech-icon'], selectedTech.includes(tech) ? styles['selected-tech'] : undefined].join(' ')}>
-								<Image src={tech.icon} width='48px' height='48px' alt={`${tech.name}`} />
+					<div className={styles['filter-comp']}>
+						<div className={styles['filter-options-container']}>
+							<p className={styles['filter-label']}>Filter: </p>
+							<div className={styles['filter-btn-container']}>
+								<button onClick={() => setSelectedTech([])} className={styles['filter-btn']}>
+									Clear All
+								</button>
+								<button onClick={() => setSelectedTech(stack)} className={styles['filter-btn']}>
+									Select All
+								</button>
 							</div>
-						))}
+						</div>
+						<div className={styles['filter-container']}>
+							{techs.map((tech, index) => (
+								<div key={index} onClick={() => toggleStack(index)} className={[styles['tech-icon'], selectedTech.includes(tech) ? styles['selected-tech'] : undefined].join(' ')}>
+									<Image src={tech.icon} width='48px' height='48px' alt={`${tech.name}`} />
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
+				<br />
+				<br />
 				<div className={styles['projects-container']}>
 					{displayProjectList.map((project, index) => (
 						<div key={index} className={styles['project-card']}>
@@ -75,4 +91,6 @@ export default function Projects<NextPage>() {
 			</div>{' '}
 		</ComponentBox>
 	);
-}
+};
+
+export default Projects;
