@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import styles from '../styles/pages/Home.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import { techs as stack } from '../data/data';
 
 const Home: NextPage = () => {
 	return (
@@ -23,7 +25,26 @@ const Home: NextPage = () => {
 						{`</p>`}
 					</p>
 				</div>
+				<br />
+				<div className={styles['stack-container']}>
+					<div>
+						<p className={styles.tagText}>{'<h3>'}</p>
+						<p className={styles['stack-label']}>Tech: </p>
+						<p className={styles.tagText}>{'</h3>'}</p>
+					</div>
+					<div className={styles['tech-list']}>
+						{stack.map((tech, index) => (
+							<div key={index} className={styles['tech-icon']}>
+								<Image src={tech.icon} width='48px' height='48px' alt={`${tech.name}`} />
+							</div>
+						))}
+					</div>
+				</div>
 			</div>
+			<br className={styles['break-line']} />
+			<br className={styles['break-line']} />
+			<br className={styles['break-line']} />
+			<br className={styles['break-line']} />
 			<div className={styles.resumeCont}>
 				<Link href='resume.docx'>
 					<div className={styles.resumeBox}>

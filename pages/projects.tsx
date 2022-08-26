@@ -8,7 +8,7 @@ import { techs as stack } from '../data/data';
 import { NextPage } from 'next';
 
 const Projects: NextPage = () => {
-	const [projectList, setProjectList] = useState(projects);
+	const [projectList] = useState(projects);
 	const [displayProjectList, setDisplayProjectList] = useState(projects);
 	const [techs] = useState<Array<techStack>>(stack);
 

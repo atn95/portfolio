@@ -7,6 +7,13 @@
 	font-family: 'Orbitron', sans-serif;
 }
 
+.tech-list {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	height: 48px;
+}
+
 .resumeCont {
 	display: flex;
 	justify-content: center;
@@ -16,7 +23,7 @@
 .resumeBox {
 	width: 50%;
 	position: relative;
-	height: calc(100vw / 6);
+	height: calc(100vw / 3 / 2);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -47,12 +54,6 @@
 	transform: scale(1.3);
 }
 
-.resumeBtnText {
-	align-self: center;
-	font-size: 15px;
-	color: white;
-}
-
 .bodyText {
 	text-align: left;
 	color: rgb(0, 255, 170);
@@ -73,7 +74,7 @@
 
 .tagText {
 	text-align: left;
-	font-size: 20px;
+	font-size: 18px;
 	color: rgb(153, 153, 153);
 }
 
@@ -86,6 +87,81 @@
 	margin-left: 6rem;
 }
 
+.resumeBtnText {
+	align-self: center;
+	font-size: 15px;
+	color: white;
+	z-index: 2;
+}
+
 .dlTxt {
 	color: rgb(0, 255, 170);
+}
+
+.stack-label {
+	margin-left: 40px;
+	color: white;
+	font-size: 25px;
+}
+
+.stack-container {
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.tech-icon {
+	width: 48px;
+	height: 48px;
+}
+
+.break-line {
+	display: none;
+}
+
+@media screen and (max-width: 1300px) {
+	.resumeBtnText {
+		font-size: 12px;
+	}
+
+	.bigNameText {
+		font-size: 80px;
+	}
+
+	.tagText {
+		font-size: 16px;
+	}
+
+	.stack-label {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.resumeBox {
+		width: 50%;
+		height: calc(100vw / 2);
+		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.bigNameText {
+		font-size: 50px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.break-line {
+		all: initial;
+	}
+
+	.bigNameText {
+		font-size: 50px;
+	}
 }
