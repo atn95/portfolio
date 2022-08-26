@@ -4,7 +4,7 @@ export interface project {
 	name: string;
 	deployed: string;
 	github: string;
-	thumbnail: string;
+	thumbnail: Array<string>;
 	description: string;
 	techs: Array<techStack>;
 }

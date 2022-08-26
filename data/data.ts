@@ -8,7 +8,7 @@ export const projects: Array<project> = [
 		name: 'DynaSoar Polling',
 		deployed: 'https://dynasoar.herokuapp.com/',
 		github: 'https://github.com/steves3142/dynamic_polling_frontend',
-		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		thumbnail: ['https://i.imgur.com/5ZYQB8H.png'],
 		description: 'Front end page for a PERN stack web application. It serves to connect Host and client to a room where the host can send questions to clients and recieve realtime answers. Has a fully functional chat and announcement system. Realtime communication through SocketIO.',
 		techs: [
 			{ name: 'css', icon: css },
@@ -23,7 +23,7 @@ export const projects: Array<project> = [
 		name: 'DynaSoar Polling Backend',
 		deployed: '',
 		github: 'https://github.com/steves3142/dynamic_polling_backend',
-		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		thumbnail: ['https://i.imgur.com/wFWeIE1.png'],
 		description: 'Backend for DynaSoar Polling. Written in express with Sequelize to connect to a PostgreSQL. Serves to handle registering and logging questions for later calls. Also serves as controller for SocketIO communication.',
 		techs: [
 			{ name: 'javascript', icon: javascript },
@@ -37,7 +37,7 @@ export const projects: Array<project> = [
 		name: 'Fitness Tracker',
 		deployed: 'https://atntracker.herokuapp.com/',
 		github: 'https://github.com/atn95/exercise_planner_tracker',
-		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		thumbnail: ['https://i.imgur.com/iIX29XQ.png'],
 		description: 'A MERN stack application to create a 7 day workout schedule. On the days you have a workout it will pull up your workout for the day and allow you to log the workout. Your lift data can be pulled up and charted the see progression for certain lifts. The front end will communicate with the backend server through RESTful enpoints. Data is then stored in mongodb.',
 		techs: [
 			{ name: 'css', icon: css },
@@ -54,7 +54,7 @@ export const projects: Array<project> = [
 		name: 'Tetris',
 		deployed: 'https://atntetris.surge.sh/',
 		github: 'https://github.com/atn95/Tetris',
-		thumbnail: 'https://i.imgur.com/3N7XJKm.png',
+		thumbnail: ['https://i.imgur.com/3N7XJKm.png'],
 		description: 'Oldschool Tetris themed game. Has an queue of next pieces and hold pieces along with a ghost piece showing where the piece would land. ',
 		techs: [
 			{ name: 'css', icon: css },

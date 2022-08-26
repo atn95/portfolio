@@ -84,7 +84,7 @@ const Projects: NextPage = () => {
 							<ComponentBox tag={project.name}>
 								<div className={styles['project-display']}>
 									<div className={styles['img-container']}>
-										<img src={project.thumbnail} alt='Project Picture' />
+										<img src={project.thumbnail[0]} alt='Project Picture' />
 									</div>
 									<div className={styles['description']}>
 										<p className={styles['tag-small']}>{'<p>'}</p>
