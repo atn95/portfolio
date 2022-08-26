@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactElement } from 'react';
+import React, { useState, useEffect } from 'react';
 import ComponentBox from '../components/ComponentBox';
 import styles from '../styles/pages/Contact.module.css';
 import axios from 'axios';
@@ -10,7 +10,7 @@ interface message {
 	message: string;
 }
 
-const contact: NextPage = () => {
+const Contact: NextPage = () => {
 	const [submitted, setSubmitted] = useState(false);
 	const initialForm = {
 		name: '',
@@ -105,4 +105,4 @@ const contact: NextPage = () => {
 	);
 };
 
-export default contact;
+export default Contact;

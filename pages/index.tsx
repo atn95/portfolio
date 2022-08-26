@@ -23,7 +23,10 @@ const Home: NextPage = () => {
 						</div>
 						<p className={styles.tagText}>
 							{`<p>`}
-							<span className={styles.bodyText}> I'm Software engineer who enjoys problem solving and challenges. I love learning about new efficient methods and applying it to my work. I will never stop seeking improvements because there's always a better way. </span>
+							<span className={styles.bodyText}>
+								{' '}
+								I{"'"}m Software engineer who enjoys problem solving and challenges. I love learning about new efficient methods and applying it to my work. I will never stop seeking improvements because there{"'"}s always a better way.{' '}
+							</span>
 							{`</p>`}
 						</p>
 					</div>

@@ -2,7 +2,7 @@ import ComponentBox from '../components/ComponentBox';
 import styles from '../styles/pages/About.module.css';
 import Link from 'next/link';
 
-function about() {
+function About() {
 	return (
 		<ComponentBox tag='About'>
 			<div className={styles.container}>
@@ -32,4 +32,4 @@ function about() {
 	);
 }
 
-export default about;
+export default About;

@@ -6,7 +6,6 @@ import ComponentBox from '../components/ComponentBox';
 import Image from 'next/image';
 import { techs as stack } from '../data/data';
 import { NextPage } from 'next';
-import Link from 'next/link';
 
 const Projects: NextPage = () => {
 	const [projectList] = useState(projects);
