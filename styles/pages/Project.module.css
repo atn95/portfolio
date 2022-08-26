@@ -22,12 +22,17 @@
 .filter-comp {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 35px;
 }
 
 .filter-options-container {
+	margin-top: 20px;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-wrap: wrap;
 	align-items: center;
 }
@@ -38,13 +43,13 @@
 	margin-bottom: 20px;
 	justify-content: center;
 	align-items: center;
-	/* flex-direction: column; */
 }
 
 .filter-container {
 	display: flex;
 	height: 35px;
 	flex-wrap: wrap;
+	margin: 0 auto;
 }
 
 .filter-label {
@@ -107,7 +112,8 @@
 }
 
 .title-bar {
-	margin-top: 20px;
+	margin-top: 90px;
+	height: auto;
 	width: 95%;
 	display: flex;
 	justify-content: space-between;
@@ -167,4 +173,95 @@
 
 .selected-tech {
 	outline: 2px solid rgb(0, 255, 170);
+}
+
+.line-break {
+	display: none;
+}
+
+.line-break2 {
+	display: none;
+}
+
+@media screen and (max-width: 1300px) {
+	.line-break {
+		all: initial;
+	}
+
+	.filter-options-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.filter-btn-container {
+		display: flex;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.filter-btn {
+		font-size: 16px;
+		flex-basis: 40%;
+	}
+
+	.filter-btn:hover {
+		background-color: rgb(0, 255, 170);
+		color: black;
+	}
+
+	.filter-btn::before {
+		font-size: 11px;
+	}
+	.filter-btn::after {
+		position: absolute;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.filter-btn-container {
+		flex-direction: column;
+	}
+	.filter-btn {
+		font-size: 16px;
+		min-height: 40px;
+		width: 90%;
+	}
+	.project-card {
+		font-size: 16px;
+	}
+
+	.title-bar {
+		margin-top: 60px;
+		width: 95%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.line-break2 {
+		all: initial;
+	}
+	.title-bar {
+		margin-top: 20px;
+		width: 95%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.projects-container {
+		margin-top: 40px;
+		width: 100%;
+	}
+
+	.project-card {
+		font-size: 16px;
+		flex-basis: 98%;
+	}
+
+	.description-text {
+		margin-left: 25px;
+		font-size: 14px;
+	}
 }

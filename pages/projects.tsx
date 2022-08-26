@@ -49,7 +49,9 @@ const Projects: NextPage = () => {
 					</div>
 					<div className={styles['filter-comp']}>
 						<div className={styles['filter-options-container']}>
-							<p className={styles['filter-label']}>Filter: </p>
+							<p className={styles['filter-label']}>
+								<span className={styles['tag-small']}>{'<h4>'}</span> Filter: <span className={styles['tag-small']}>{'</h4>'}</span>
+							</p>
 							<div className={styles['filter-btn-container']}>
 								<button onClick={() => setSelectedTech([])} className={styles['filter-btn']}>
 									Clear All
@@ -68,6 +70,12 @@ const Projects: NextPage = () => {
 						</div>
 					</div>
 				</div>
+				<br className={styles['line-break']} />
+				<br className={styles['line-break']} />
+				<br className={styles['line-break']} />
+				<br className={styles['line-break2']} />
+				<br className={styles['line-break2']} />
+				<br className={styles['line-break2']} />
 				<br />
 				<br />
 				<div className={styles['projects-container']}>
