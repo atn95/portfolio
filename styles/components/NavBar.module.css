@@ -52,11 +52,6 @@
 	outline: 2px solid rgb(0, 255, 170);
 }
 
-.active {
-	color: rgb(0, 255, 170);
-	outline: 2px solid rgb(0, 255, 170);
-}
-
 .mobile-nav-container {
 	top: 0;
 	left: 0;
@@ -97,7 +92,8 @@
 		width: 90%;
 		height: 45px;
 		background-color: black;
-		outline: 2px solid rgb(198, 198, 198);
+		color: rgb(153, 153, 153);
+		border: 2px solid rgb(198, 198, 198);
 	}
 
 	.open-btn {
@@ -114,6 +110,9 @@
 		display: flex;
 	}
 
+	.nav-btn:hover {
+	}
+
 	.head-text-cont {
 		position: absolute;
 		top: 50px;
@@ -127,4 +126,10 @@
 		color: rgb(0, 255, 170);
 		font-size: 27px;
 	}
+}
+
+.active {
+	color: rgb(0, 255, 170);
+	border: 2px solid rgb(0, 255, 170);
+	z-index: 5;
 }
