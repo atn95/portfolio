@@ -42,6 +42,7 @@
 }
 
 .input {
+	all: unset;
 	margin: 0;
 	height: 40px;
 	margin-bottom: 10px;
@@ -71,6 +72,7 @@
 }
 
 .message {
+	all: unset;
 	font-size: 18px;
 	outline: 2px solid rgb(0, 255, 170);
 	background-color: rgb(58, 58, 58);
@@ -78,7 +80,94 @@
 }
 
 .submit-btn {
+	all: unset;
 	width: 60%;
 	height: 40px;
 	border-radius: 5px;
+	outline: 2px solid rgb(0, 255, 170);
+	background-color: black;
+	color: rgb(0, 255, 170);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.5s;
+}
+
+.submit-btn::before {
+	all: unset;
+	position: absolute;
+	left: 50%;
+	font-size: 18px;
+	transform: translateX(-180%);
+	content: '<button>';
+}
+.submit-btn::after {
+	all: unset;
+	position: absolute;
+	font-size: 18px;
+	left: 50%;
+	content: '</button>';
+	transform: translateX(70%);
+}
+
+.submit-btn:hover {
+	outline: 2px solid rgb(0, 255, 170);
+	background-color: rgb(0, 255, 170);
+	color: black;
+}
+
+.response-container {
+	position: fixed;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	outline: 2px solid rgb(0, 255, 170);
+	width: min(600px, 90%);
+	height: min(200px, 40%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	color: rgb(153, 153, 153);
+}
+
+.close-pop {
+	all: unset;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 71, 71);
+	outline: 2px solid rgb(0, 255, 170);
+	transition: background-color 0.5s;
+}
+
+.close-pop::before {
+	all: unset;
+	position: absolute;
+	left: 50%;
+	font-size: 18px;
+	transform: translateX(-180%);
+	content: '<button>';
+}
+.close-pop::after {
+	all: unset;
+	position: absolute;
+	font-size: 18px;
+	left: 50%;
+	content: '</button>';
+	transform: translateX(70%);
+}
+
+.close-pop:hover {
+	outline: 2px solid rgb(0, 255, 170);
+	background-color: rgb(126, 19, 19);
+	/* color: rgb(126, 19, 19); */
+	color: black;
+}
+
+.hidden {
+	display: none;
 }

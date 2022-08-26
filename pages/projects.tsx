@@ -29,13 +29,11 @@ export default function Projects<NextPage>() {
 		for (const proj of projectList) {
 			for (const tech of proj.techs) {
 				if (selectedTechNames.includes(tech.name)) {
-					console.log('breaking');
 					filteredProj.push(proj);
 					break;
 				}
 			}
 		}
-		console.log(filteredProj);
 		setDisplayProjectList(filteredProj);
 	}, [selectedTech]);
 
@@ -51,7 +49,7 @@ export default function Projects<NextPage>() {
 					<div className={styles['filter-container']}>
 						{techs.map((tech, index) => (
 							<div key={index} onClick={() => toggleStack(index)} className={[styles['tech-icon'], selectedTech.includes(tech) ? styles['selected-tech'] : undefined].join(' ')}>
-								<Image src={tech.icon} width='32px' height='32px' alt={`${tech.name}`} />
+								<Image src={tech.icon} width='48px' height='48px' alt={`${tech.name}`} />
 							</div>
 						))}
 					</div>

@@ -33,7 +33,6 @@ export const projects: Array<project> = [
 			{ name: 'nodejs', icon: nodejs },
 		],
 	},
-
 	{
 		name: 'Fitness Tracker',
 		deployed: 'https://atntracker.herokuapp.com/',

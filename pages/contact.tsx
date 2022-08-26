@@ -34,11 +34,13 @@ const contact = () => {
 		try {
 			const res = await axios.post(`https://formspree.io/f/xgeqvzqb`, form);
 			if (res.data.ok) {
-				alert('Message Sent');
+				setResponse('Message Sent');
+				setTimeout(() => setResponse(''), 3000);
 			}
 			setFormState(initialForm);
 		} catch (error) {
-			alert('something went wrong');
+			setResponse('Something went wrong, Try Again');
+			setTimeout(() => setResponse(''), 3000);
 		}
 	};
 
@@ -51,6 +53,13 @@ const contact = () => {
 
 	return (
 		<ComponentBox tag='Contact'>
+			<div className={[styles['response-container'], response == '' ? styles['hidden'] : undefined].join(' ')}>
+				<div></div>
+				<div>{response}</div>
+				<button className={styles['close-pop']} onClick={() => setResponse('')}>
+					Close
+				</button>
+			</div>
 			<div className={styles['contact-page']}>
 				<div className={styles['title-container']}>
 					<p className={styles['tag']}>{'<h2>'}</p>
@@ -66,23 +75,23 @@ const contact = () => {
 								<p className={styles['label-text']}> Full Name:</p>
 								<p className={styles['tag-small']}>{'</h3>'}</p>
 							</label>
-							<input className={styles['input']} type='text' name='name' id='full-name' placeholder='' required={true} value={form.name} onChange={handleFormChange} />
+							<input className={styles['input']} type='text' name='name' id='full-name' placeholder='<input type = "text" />' required={true} value={form.name} onChange={handleFormChange} />
 							<label htmlFor='email-address' className={styles['label']}>
 								<p className={styles['tag-small']}>{'<h3>'}</p>
 								<p className={styles['label-text']}> Email:</p>
 								<p className={styles['tag-small']}>{'</h3>'}</p>
 							</label>
-							<input className={styles['input']} type='email' name='email' id='email-address' placeholder=' ' required={true} value={form.email} onChange={handleFormChange} />
+							<input className={styles['input']} type='email' name='email' id='email-address' placeholder='<input type="email" />' required={true} value={form.email} onChange={handleFormChange} />
 							<label htmlFor='message' className={styles['label']}>
 								<p className={styles['tag-small']}>{'<h3>'}</p>
 								<p className={styles['label-text']}> Message:</p>
 								<p className={styles['tag-small']}>{'</h3>'}</p>
 							</label>
-							<textarea className={styles['message']} rows={10} name='message' id='message' placeholder=' ' required={true} value={form.message} onChange={handleFormChange} />
+							<textarea className={styles['message']} rows={10} name='message' id='message' placeholder='<textarea />' required={true} value={form.message} onChange={handleFormChange} />
 							<input type='hidden' name='_subject' id='email-subject' value='Contact Form Submission' />
 							<br />
 							<div className={styles['submit-container']}>
-								<button className={styles['submit-btn']} type='submit'>
+								<button type='submit' className={styles['submit-btn']}>
 									Submit
 								</button>
 							</div>
