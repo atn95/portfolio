@@ -1,3 +1,7 @@
+.main-container {
+	width: 100%;
+}
+
 .container {
 	position: fixed;
 	top: 0;
@@ -51,4 +55,76 @@
 .active {
 	color: rgb(0, 255, 170);
 	outline: 2px solid rgb(0, 255, 170);
+}
+
+.mobile-nav-container {
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		display: none;
+	}
+
+	.mobile-nav-container {
+		display: flex;
+		position: absolute;
+		color: white;
+		height: 100px;
+		width: 100%;
+		align-items: center;
+	}
+	.mobile-header {
+		width: 100%;
+		margin-left: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	.open-btn-text {
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-btn {
+		display: none;
+		font-size: 26px;
+		position: relative;
+		justify-content: center;
+		z-index: 4;
+		width: 90%;
+		height: 45px;
+		background-color: black;
+		outline: 2px solid rgb(198, 198, 198);
+	}
+
+	.open-btn {
+		top: 0;
+		position: absolute;
+		width: 100%;
+		padding-top: 20px;
+		font-size: 80px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.open-btn:hover .nav-btn {
+		display: flex;
+	}
+
+	.head-text-cont {
+		position: absolute;
+		top: 50px;
+		left: 60%;
+		transform: translateX(-50%);
+		width: 70%;
+	}
+
+	.head-text {
+		margin-left: 30px;
+		color: rgb(0, 255, 170);
+		font-size: 27px;
+	}
 }
