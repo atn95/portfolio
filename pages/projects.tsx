@@ -50,7 +50,7 @@ export default function Projects<NextPage>() {
 					</div>
 					<div className={styles['filter-container']}>
 						{techs.map((tech, index) => (
-							<div onClick={() => toggleStack(index)} className={[styles['tech-icon'], selectedTech.includes(tech) ? styles['selected-tech'] : undefined].join(' ')}>
+							<div key={index} onClick={() => toggleStack(index)} className={[styles['tech-icon'], selectedTech.includes(tech) ? styles['selected-tech'] : undefined].join(' ')}>
 								<Image src={tech.icon} width='32px' height='32px' alt={`${tech.name}`} />
 							</div>
 						))}
