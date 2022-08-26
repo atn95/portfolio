@@ -6,6 +6,7 @@ import ComponentBox from '../components/ComponentBox';
 import Image from 'next/image';
 import { techs as stack } from '../data/data';
 import { NextPage } from 'next';
+import Link from 'next/link';
 
 const Projects: NextPage = () => {
 	const [projectList] = useState(projects);
@@ -92,8 +93,12 @@ const Projects: NextPage = () => {
 										<p className={styles['tag-small']}>{'</p>'}</p>
 									</div>
 									<div className={styles['links-container']}>
-										<div className={styles['links']}>Github</div>
-										<div className={styles['links']}>Live</div>
+										<div className={styles['links']} onClick={() => window.open(project.github)}>
+											<a target='_blank'>Github</a>
+										</div>
+										<div className={styles['links']} onClick={() => window.open(project.deployed)}>
+											Live
+										</div>
 									</div>
 								</div>
 							</ComponentBox>

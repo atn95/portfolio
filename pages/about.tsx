@@ -1,5 +1,6 @@
 import ComponentBox from '../components/ComponentBox';
 import styles from '../styles/pages/About.module.css';
+import Link from 'next/link';
 
 function about() {
 	return (
@@ -23,7 +24,9 @@ function about() {
 						<p className={styles['tag']}>{'</p>'}</p>
 					</div>
 				</div>
-				<button className={styles['contact-btn']}>Contact Me</button>
+				<Link href={'/contact'}>
+					<button className={styles['contact-btn']}>Contact Me</button>
+				</Link>
 			</div>
 		</ComponentBox>
 	);
