@@ -90,6 +90,10 @@ const Projects: NextPage = () => {
 										<p className={styles['tag-small']}>{'<p>'}</p>
 										<p className={styles['description-text']}>{project.description}</p>
 										<p className={styles['tag-small']}>{'</p>'}</p>
+										<div className={styles['links-container']}>
+											<div className={styles['links']}>Github</div>
+											<div className={styles['links']}>Live</div>
+										</div>
 									</div>
 								</div>
 							</ComponentBox>
