@@ -25,9 +25,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<div className='page' ref={pageRef}>
 			<Head>
-				<title>ATN</title>
+				<title>An Nguyen{`'`}s Portfolio</title>
 				<meta name='description' content={`An Nguyen's Portfolio. Full Stack Developer`} />
 				<link rel='icon' href='/favicon.png' type='image/x-icon' />
+				<link rel='apple-touch-icon' sizes='180x180' href='/favicon.png' />
+				<link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
+				<link rel='icon' type='image/png' sizes='16x16' href='/favicon.png' />
 			</Head>
 			<div className='rain' style={{ left: `${rainPos}px` }}>
 				<p>{rainMsg}</p>

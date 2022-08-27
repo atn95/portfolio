@@ -63,9 +63,11 @@ const Contact: NextPage = () => {
 			</div>
 			<div className={styles['contact-page']}>
 				<div className={styles['title-container']}>
-					<p className={styles['tag']}>{'<h2>'}</p>
-					<h1 className={styles['header']}>Contact</h1>
-					<p className={styles['tag']}>{'</h2>'}</p>
+					<div>
+						<p className={styles['tag']}>{'<h2>'}</p>
+						<h1 className={styles['header']}>Contact</h1>
+						<p className={styles['tag']}>{'</h2>'}</p>
+					</div>
 				</div>
 				<br />
 				<ComponentBox tag='form'>
