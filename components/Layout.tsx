@@ -1,8 +1,11 @@
-import { useState, createRef, useRef } from 'react';
+import { useState, useRef } from 'react';
 import NavBar from './NavBar';
 import Head from 'next/head';
+import Image from 'next/image';
 import { rainBinary as msgArray } from '../data/data';
 import useInterval from '../hooks/useInterval';
+import githubImg from '../assets/githubContact.png';
+import LinkedinImg from '../assets/Linkedin.png';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	const [rainBinary] = useState<Array<String>>(msgArray);
@@ -12,7 +15,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 	const unfocus = (): void => {
 		pageRef.current?.focus();
-		console.log('doing it');
 	};
 
 	useInterval(() => {
@@ -24,6 +26,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 		<div className='page' ref={pageRef}>
 			<div className='rain' style={{ left: `${rainPos}px` }}>
 				<p>{rainMsg}</p>
+			</div>
+			<div className='linkedin-icon' onClick={() => window.open(`https://www.linkedin.com/in/atn95/`)}>
+				<Image src={LinkedinImg}></Image>
+			</div>
+			<div className='github-icon' onClick={() => window.open(`https://github.com/atn95`)}>
+				<Image src={githubImg}></Image>
 			</div>
 			<NavBar unfocus={unfocus} />
 			<br />
