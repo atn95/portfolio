@@ -28,10 +28,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				<p>{rainMsg}</p>
 			</div>
 			<div className='linkedin-icon' onClick={() => window.open(`https://www.linkedin.com/in/atn95/`)}>
-				<Image src={LinkedinImg}></Image>
+				<Image src={LinkedinImg} alt='Linkedin atn95'></Image>
 			</div>
 			<div className='github-icon' onClick={() => window.open(`https://github.com/atn95`)}>
-				<Image src={githubImg}></Image>
+				<Image src={githubImg} alt='Github atn95'></Image>
 			</div>
 			<NavBar unfocus={unfocus} />
 			<br />
