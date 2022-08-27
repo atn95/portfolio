@@ -105,9 +105,11 @@ const Projects: NextPage = () => {
 										<div className={styles['links']} onClick={() => window.open(project.github)}>
 											<a target='_blank'>Github</a>
 										</div>
-										<div className={styles['links']} onClick={() => window.open(project.deployed)}>
-											Live
-										</div>
+										{project.deployed ? (
+											<div className={styles['links']} onClick={() => window.open(project.deployed)}>
+												Live
+											</div>
+										) : undefined}
 									</div>
 								</div>
 							</ComponentBox>
