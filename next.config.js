@@ -6,6 +6,10 @@ const nextConfig = {
 		domains: ['atnsrc.dev', 'i.imgur.com'],
 		formats: ['image/webp'],
 	},
+	i18n: {
+		locales: ['en'],
+		defaultLocale: 'en',
+	},
 };
 
 module.exports = nextConfig;
