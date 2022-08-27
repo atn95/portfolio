@@ -28,9 +28,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				<title>An Nguyen{`'`}s Portfolio</title>
 				<meta name='description' content={`An Nguyen's Portfolio. Full Stack Developer`} />
 				<link rel='icon' href='/favicon.png' type='image/x-icon' />
-				<link rel='apple-touch-icon' sizes='180x180' href='/favicon.png' />
-				<link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
-				<link rel='icon' type='image/png' sizes='16x16' href='/favicon.png' />
+				<link rel='apple-touch-icon' sizes='180x180' href='/favicon180.png' />
+				<link rel='icon' type='image/png' sizes='32x32' href='/favicon32.png' />
+				<link rel='icon' type='image/png' sizes='16x16' href='/favicon16.png' />
 			</Head>
 			<div className='rain' style={{ left: `${rainPos}px` }}>
 				<p>{rainMsg}</p>
