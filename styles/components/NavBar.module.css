@@ -65,11 +65,14 @@
 
 	.mobile-nav-container {
 		display: flex;
-		position: absolute;
+		position: fixed;
+		background: black;
+		z-index: 5;
 		color: white;
-		height: 100px;
+		height: 125px;
 		width: 100%;
 		align-items: center;
+		border-bottom: 2px solid gray;
 	}
 	.mobile-header {
 		width: 100%;
@@ -100,7 +103,7 @@
 		top: 0;
 		position: absolute;
 		width: 100%;
-		padding-top: 20px;
+		padding-top: -5px;
 		font-size: 80px;
 		display: flex;
 		flex-direction: column;
@@ -112,7 +115,7 @@
 
 	.head-text-cont {
 		position: absolute;
-		top: 50px;
+		top: 30px;
 		left: 60%;
 		transform: translateX(-50%);
 		width: 70%;
