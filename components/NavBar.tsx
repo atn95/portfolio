@@ -3,7 +3,11 @@ import { ReactElement } from 'react';
 import styles from '../styles/components/NavBar.module.css';
 import { useRouter } from 'next/router';
 
-export default function NavBar(): ReactElement {
+interface props {
+	unfocus: () => void;
+}
+
+export default function NavBar({ unfocus }: props): ReactElement {
 	const router = useRouter();
 	const currentRoute = router.pathname;
 
@@ -40,16 +44,24 @@ export default function NavBar(): ReactElement {
 					<div className={styles['open-btn']}>
 						<p className={styles['open-btn-text']}>㊂</p>
 						<Link href={'/'}>
-							<div className={[styles['nav-btn'], currentRoute == '/' ? styles['active'] : undefined].join(' ')}>{'//1. <Home />'}</div>
+							<div className={[styles['nav-btn'], currentRoute == '/' ? styles['active'] : undefined].join(' ')} onClick={() => unfocus()}>
+								{'//1. <Home />'}
+							</div>
 						</Link>
 						<Link href={'/projects'}>
-							<div className={[styles['nav-btn'], currentRoute == '/projects' ? styles['active'] : undefined].join(' ')}>{'//2. <Projects />'}</div>
+							<div className={[styles['nav-btn'], currentRoute == '/projects' ? styles['active'] : undefined].join(' ')} onClick={() => unfocus()}>
+								{'//2. <Projects />'}
+							</div>
 						</Link>
 						<Link href={'/contact'}>
-							<div className={[styles['nav-btn'], currentRoute == '/contact' ? styles['active'] : undefined].join(' ')}>{'//3. <Contact />'}</div>
+							<div className={[styles['nav-btn'], currentRoute == '/contact' ? styles['active'] : undefined].join(' ')} onClick={() => unfocus()}>
+								{'//3. <Contact />'}
+							</div>
 						</Link>
 						<Link href={'/about'}>
-							<div className={[styles['nav-btn'], currentRoute == '/about' ? styles['active'] : undefined].join(' ')}>{'//4. <About />'}</div>
+							<div className={[styles['nav-btn'], currentRoute == '/about' ? styles['active'] : undefined].join(' ')} onClick={() => unfocus()}>
+								{'//4. <About />'}
+							</div>
 						</Link>
 					</div>
 					<div className={styles['head-text-cont']}>

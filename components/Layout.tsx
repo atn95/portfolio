@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, createRef, useRef } from 'react';
 import NavBar from './NavBar';
 import Head from 'next/head';
 import { rainBinary as msgArray } from '../data/data';
@@ -8,6 +8,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 	const [rainBinary] = useState<Array<String>>(msgArray);
 	const [rainPos, setRainPos] = useState<number>(0);
 	const [rainMsg, setRainMsg] = useState(rainBinary[0]);
+	const pageRef = useRef<HTMLDivElement>(null);
+
+	const unfocus = (): void => {
+		pageRef.current?.focus();
+		console.log('doing it');
+	};
 
 	useInterval(() => {
 		setRainPos(Math.floor(Math.random() * (window.innerWidth - 40) + 10));
@@ -15,11 +21,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 	}, 15000);
 
 	return (
-		<div className='page'>
+		<div className='page' ref={pageRef}>
 			<div className='rain' style={{ left: `${rainPos}px` }}>
 				<p>{rainMsg}</p>
 			</div>
-			<NavBar />
+			<NavBar unfocus={unfocus} />
 			<br />
 			<br />
 			<br />
