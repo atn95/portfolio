@@ -68,6 +68,16 @@ const Contact: NextPage = () => {
 						<h1 className={styles['header']}>Contact</h1>
 						<p className={styles['tag']}>{'</h2>'}</p>
 					</div>
+					<div>
+						<p className={styles['tag']}>{'<h3>'}</p>
+						<h1 className={[styles['tab']].join(' ')}>
+							Email:{' '}
+							<a href='mailto:' className={styles['email-text']}>
+								antannguyen2000@gmail.com
+							</a>
+						</h1>
+						<p className={styles['tag']}>{'</h3>'}</p>
+					</div>
 				</div>
 				<br />
 				<ComponentBox tag='form'>

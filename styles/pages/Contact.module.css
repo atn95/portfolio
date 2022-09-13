@@ -9,7 +9,7 @@
 	padding: 0;
 	padding-top: 1rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .contact-info {
@@ -27,6 +27,18 @@
 	text-align: left;
 	font-size: 20px;
 	color: rgb(153, 153, 153);
+}
+
+.email-text {
+	text-align: left;
+	font-size: 20px;
+	color: rgb(0, 255, 170);
+	text-decoration: underline;
+}
+
+.tab {
+	font-size: 20px;
+	margin-left: 30px;
 }
 
 .tag-small {
@@ -186,5 +198,8 @@
 	}
 	.submit-btn::after {
 		font-size: 11px;
+	}
+	.email-text {
+		font-size: 16px;
 	}
 }
